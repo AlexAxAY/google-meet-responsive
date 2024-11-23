@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <!-- css -->
+    <link rel="stylesheet" href="google.css" />
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <!-- google icon -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=swap"
+    />
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar">
+      <div class="container-fluid">
+        <a
+          class="navbar-brand mr-0"
+          href="https://meet.google.com/landing?authuser=0"
+          style="margin: 0px 0px 0px 16px"
+          ><img
+            title="Google meet"
+            src="./images/cdnlogo.com_meet.png"
+            style="height: 35px"
+            alt="google-logo"
+        /></a>
+
+        <!-- Items before the screen size reduces -->
+        <ul class="normal mb-0 p-0 d-none d-md-flex" style="list-style: none">
+          <li
+            style="
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              margin-right: 11px;
+            "
+          >
+            <a
+              style="
+                font-size: 18px;
+                color: #5f6368;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              "
+              >5:31 PM • Tue, Nov 5</a
+            >
+          </li>
+          <li>
+            <a class="tag1" href="#" onclick="toggleDropMenu()"
+              ><i class="material-symbols-outlined" title="Support">help</i></a
+            >
+          </li>
+          <li onclick="openFeedback()">
+            <a class="tag2" href="#"
+              ><i class="material-symbols-outlined" title="Report a problem"
+                >feedback</i
+              ></a
+            >
+          </li>
+          <li onclick="openSettings()">
+            <a class="tag3" href="#"
+              ><i class="material-symbols-outlined" title="Settings"
+                >settings</i
+              ></a
+            >
+          </li>
+          <li>
+            <a class="tag4" href="#"
+              ><i class="material-symbols-outlined" title="Google apps"
+                >apps</i
+              ></a
+            >
+          </li>
+          <li>
+            <a class="tag5" href="#"
+              ><i class="material-symbols-outlined fs-1 mr-0" title="Sign in"
+                >account_circle</i
+              ></a
+            >
+          </li>
+        </ul>
+
+        <!-- menu button -->
+        <button
+          class="navbar-toggler d-md-none"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+          style="max-width: 80px"
+        >
+          <!-- close button -->
+          <div
+            class="offcanvas-header justify-content-center"
+            style="padding: 16px 16px 16px 10px"
+          >
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+              style="margin: 0px"
+            ></button>
+          </div>
+
+          <!-- slider items -->
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link text-end" aria-current="page" href="#"
+                  ><i class="material-symbols-outlined">account_circle</i></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-end" href="#"
+                  ><i class="material-symbols-outlined">apps</i></a
+                >
+              </li>
+              <li onclick="openSettings()" class="nav-item">
+                <a class="nav-link text-end" href="#"
+                  ><i class="material-symbols-outlined">settings</i></a
+                >
+              </li>
+              <li onclick="openFeedback()" class="nav-item">
+                <a class="nav-link text-end" href="#"
+                  ><i class="material-symbols-outlined">feedback</i></a
+                >
+              </li>
+              <li class="nav-item">
+                <a onclick="toggleDropMenu()" class="nav-link text-end" href="#"
+                  ><i class="material-symbols-outlined">help</i></a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="drop-down">
+        <div class="d-flex py-2">
+          <div class="dropy w-100" style="flex-direction: column">
+            <div>
+              <a href="https://support.google.com/meet/?hl=en#topic=14074839"
+                >Help</a
+              >
+            </div>
+            <div>
+              <a href="https://support.google.com/a/users/answer/9282720?hl=en"
+                >Training</a
+              >
+            </div>
+            <div>
+              <a href="https://policies.google.com/terms?hl=en"
+                >Terms of Service</a
+              >
+            </div>
+            <div>
+              <a href="https://policies.google.com/privacy?hl=en"
+                >Privacy Policy</a
+              >
+            </div>
+            <div>
+              <a
+                href="chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://www.gstatic.com/policies/termssummary/meet.pdf?hl=en"
+                >Terms summary</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- end of navbar -->
+
+    <!-- feedback bar -->
+    <div class="feedback">
+      <header>
+        <div class="header-div d-flex">
+          <h1>Send feedback to Google</h1>
+          <div
+            onclick="openFeedback()"
+            class="close-icon ms-auto d-flex justify-content-center align-items-center"
+          >
+            <i class="material-symbols-outlined" style="color: white">close</i>
+          </div>
+        </div>
+      </header>
+
+      <div class="image-1 d-flex justify-content-center">
+        <img
+          class="mt-4"
+          src="./images/new.png"
+          alt="feedback"
+          style="min-height: 160px; height: 250px"
+        />
+      </div>
+
+      <div class="feedback-footer">
+        <div class="d-flex">
+          <span><i class="material-symbols-outlined">flag</i></span>
+          <p class="m-0" style="font-size: 18px">Report an issue</p>
+        </div>
+        <div class="d-flex">
+          <span><i class="material-symbols-outlined">lightbulb_2</i></span>
+          <p class="m-0" style="font-size: 18px">Suggest an idea</p>
+        </div>
+      </div>
+    </div>
+    <!-- end of feedback bar -->
+
+    <!-- settings bar -->
+    <div class="settings">
+      <div class="settings-div">
+        <div class="col">
+          <div class="settings-image d-flex justify-content-center mt-4">
+            <img
+              src="./images/settings.png"
+              alt="settings"
+              style="height: 230px; width: 230px"
+            />
+          </div>
+        </div>
+        <div class="col">
+          <p
+            class="text-center"
+            style="font-size: 24px; color: #444746; margin: 16px 0px 0px 0px"
+          >
+            Do you want people to see you in the meeting?
+          </p>
+        </div>
+        <div class="col">
+          <p style="font-size: 14px; color: #444746" class="text-center m-0">
+            You can still turn off your camera anytime in the meeting
+          </p>
+        </div>
+        <div class="col">
+          <div class="d-flex justify-content-center">
+            <button class="use-camera-button">Use camera</button>
+          </div>
+        </div>
+        <div class="col">
+          <div class="d-flex justify-content-center">
+            <button class="continue-button">Continue without camera</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="main container-fluid">
+      <div class="row w-100 h-100 align-items-center">
+        <!-- left side -->
+        <div class="col-12 col-lg-6" style="margin-top: 15px">
+          <div
+            class="zebra row text-lg-start"
+            style="flex-direction: column; text-align: center"
+          >
+            <div class="col">
+              <p style="font-size: 45px; line-height: 1.2">
+                Video calls and meetings <br />for everyone
+              </p>
+            </div>
+            <div class="col">
+              <p
+                style="
+                  font-size: 22px;
+                  color: #444746;
+                  margin-bottom: 40px;
+                  line-height: 1.2;
+                "
+              >
+                Connect, collaborate, and celebrate from <br />
+                anywhere with Google meet
+              </p>
+            </div>
+            <div class="col">
+              <div class="row justify-content-center justify-content-lg-start">
+                <!-- button new meeting -->
+                <div class="col-12 mb-3 col-lg-auto">
+                  <button class="main-button btn-group text-white">
+                    <i class="material-symbols-outlined fs-5 me-2">video_call</i
+                    >New meeting
+                  </button>
+                </div>
+
+                <!-- input -->
+                <div
+                  class="col-12 mb-3 col-md-5 col-lg-auto"
+                  style="padding-right: 0"
+                >
+                  <label class="input mx-auto ms-md-auto me-md-0" for="input">
+                    <i class="keyboard material-symbols-outlined mx-2"
+                      >keyboard</i
+                    >
+                    <input
+                      oninput="activeState()"
+                      type="text"
+                      placeholder="Enter a code or link"
+                      id="input"
+                    />
+                  </label>
+                </div>
+
+                <!-- join button -->
+                <div
+                  class="col-12 ps-0 mb-3 col-md-1 col-lg-auto ps-lg-2"
+                  style="padding-right: 0"
+                >
+                  <button class="join col px-0" disabled>Join</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div
+                style="height: 25px; border-bottom: 0.5px solid #747775"
+              ></div>
+            </div>
+
+            <div class="col pt-3">
+              <p style="font-size: 12px; color: #444746">
+                <a href="https://support.google.com/meet/?hl=en#topic=14074839"
+                  >Learn more</a
+                >
+                about Google meet
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- right side -->
+        <div class="col-12 col-lg-6" style="margin-top: 65px">
+          <div class="row justify-content-center">
+            <!-- carousel -->
+            <div
+              id="carouselExampleDark"
+              class="carousel carousel-dark slide"
+              style="width: 520px"
+            >
+              <div class="carousel-indicators">
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleDark"
+                  data-bs-slide-to="0"
+                  class="carousel-button active"
+                  aria-current="true"
+                  aria-label="Slide 1"
+                ></button>
+                <button
+                  type="button"
+                  class="carousel-button"
+                  data-bs-target="#carouselExampleDark"
+                  data-bs-slide-to="1"
+                  aria-label="Slide 2"
+                ></button>
+                <button
+                  type="button"
+                  class="carousel-button"
+                  data-bs-target="#carouselExampleDark"
+                  data-bs-slide-to="2"
+                  aria-label="Slide 3"
+                ></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="10000">
+                  <div class="d-flex" style="justify-content: center">
+                    <img
+                      src="./images/248431-P453LS-616.jpg"
+                      class="rounded-circle"
+                      alt="image"
+                      style="margin-bottom: 180px"
+                    />
+                  </div>
+                  <div class="carousel-caption d-block">
+                    <h5
+                      style="font-weight: 400; font-size: 24px; color: #212121"
+                    >
+                      Get a link you can share
+                    </h5>
+                    <p style="font-size: 14px; color: #212121">
+                      Click <b>New meeting</b> to get a link you can send to
+                      people you want to meet with
+                    </p>
+                  </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                  <div class="d-flex" style="justify-content: center">
+                    <img
+                      src="./images/3880824.jpg"
+                      class="rounded-circle"
+                      alt="image"
+                      style="margin-bottom: 180px"
+                    />
+                  </div>
+                  <div class="carousel-caption d-block">
+                    <h5
+                      style="font-weight: 400; font-size: 24px; color: #212121"
+                    >
+                      Plan ahead
+                    </h5>
+                    <p style="font-size: 14px; color: #212121">
+                      Click <b>New meeting</b> to schedule meetings in Google
+                      Calander and send invites to participants
+                    </p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="d-flex" style="justify-content: center">
+                    <img
+                      src="./images/3778209.jpg"
+                      class="rounded-circle"
+                      alt="image"
+                      style="margin-bottom: 180px"
+                    />
+                  </div>
+                  <div class="carousel-caption d-block">
+                    <h5
+                      style="font-weight: 400; font-size: 24px; color: #212121"
+                    >
+                      Your meeting is safe
+                    </h5>
+                    <p style="font-size: 14px; color: #212121">
+                      No one can join a meeting unless invited or admitted by
+                      the host
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                style="justify-content: end"
+                data-bs-target="#carouselExampleDark"
+                data-bs-slide="prev"
+              >
+                <div class="arrow-prev">
+                  <span class="material-symbols-outlined" aria-hidden="true"
+                    >arrow_back_ios</span
+                  >
+                </div>
+              </button>
+              <button
+                class="carousel-control-next"
+                style="justify-content: start"
+                type="button"
+                data-bs-target="#carouselExampleDark"
+                data-bs-slide="next"
+              >
+                <div class="arrow-next">
+                  <span class="material-symbols-outlined" aria-hidden="true"
+                    >arrow_forward_ios</span
+                  >
+                </div>
+              </button>
+            </div>
+            <!-- end of carousel -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- bootstrap link -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- javascript -->
+    <script>
+      // a function to change the color and state of the button
+      const activeState = () => {
+        const input = document.querySelector("#input");
+        const joinButton = document.querySelector(".join");
+
+        if (input.value.trim() !== "") {
+          joinButton.disabled = false;
+          joinButton.style.color = "#1a73e8";
+        } else {
+          joinButton.disabled = true;
+          joinButton.style.color = "";
+        }
+      };
+
+      // a function to open and close the menu
+      const toggleDropMenu = () => {
+        const dropDown = document.querySelector(".drop-down");
+
+        if (dropDown.style.display === "block") {
+          dropDown.style.display = "none";
+        } else {
+          dropDown.style.display = "block";
+        }
+      };
+
+      // an additional event for closing the menu drop
+
+      const closeDrop = (event) => {
+        const tag1 = document.querySelector(".tag1");
+        const dropDown = document.querySelector(".drop-down");
+
+        if (!dropDown.contains(event.target) && !tag1.contains(event.target)) {
+          dropDown.style.display = "none";
+        }
+      };
+      document.addEventListener("click", closeDrop);
+
+      // open feedback
+      const openFeedback = () => {
+        const feedback = document.querySelector(".feedback");
+
+        if (feedback.classList.contains("active")) {
+          feedback.classList.remove("active");
+        } else {
+          feedback.classList.add("active");
+        }
+      };
+
+      // open settings
+      const openSettings = () => {
+        const settings = document.querySelector(".settings");
+        if (settings.style.display === "block") {
+          settings.style.display = "none";
+        } else {
+          settings.style.display = "block";
+        }
+      };
+    </script>
+  </body>
+</html>
